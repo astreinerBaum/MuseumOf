@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!--
+    Welcome to the Museum of...
+
+    proudly presented by
+    Francis Kamprath and Matthias Pitscher
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Museum of...</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="style.css"  />
+
+    <script type="text/javascript">
+      var images = [
+        "ellipsis.gif",
+        "facebook.gif",
+        "facebook2.gif",
+        "flickr.gif",
+        "google.gif",
+        "icq.gif",
+        "loading1.gif",
+        "octocat.gif",
+        "osx1.gif",
+        "osx2.gif",
+        "osx3.gif",
+        "spin.gif",
+        "twitter.gif",
+        "wait1.gif",
+        "wait2.gif",
+        "wait3.gif",
+        "wait4.gif",
+        "wait5.gif",
+        "wait6.gif",
+        "wait7.gif",
+        "win_3-1.gif",
+        "win7.gif",
+        "win95.gif"
+      ];
+      var randomIndex;
+      function getImage() {
+        var img = '<img class=\"center\" src=\"spinners/';
+        randomIndex = Math.floor(Math.random() * images.length);
+        img += images[randomIndex];
+        img += '\" alt=' + images[randomIndex] + '/>';
+        return img;
+      }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write(getImage());
+      parent.location.hash = images[randomIndex];
+    </script>
+
+  </body>
+</html>
